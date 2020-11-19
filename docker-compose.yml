@@ -1,12 +1,12 @@
 version: "3.8"
 services:
-  web:
+  app:
     build: .
     volumes:
       - ./app:/app
       - /app/node_modules
   test:
-    extends: "web"
+    extends: "app"
     build:
         context: .
         target: "build"
