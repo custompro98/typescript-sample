@@ -9,6 +9,7 @@
     "dev": "nodemon src/index.ts",
     "prebuild": "npm run clean",
     "test": "jest",
+    "test:coverage": "jest --collectCoverage",
     "test:interactive": "jest --watchAll"
   },
   "author": "custompro98",
