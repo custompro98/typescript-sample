@@ -2,6 +2,12 @@ version: "3.8"
 services:
   app:
     build: .
+  dev:
+    extends: "app"
+    build:
+      context: .
+      target: "build"
+    command: ["npm", "run", "dev"]
     volumes:
       - ./app:/app
       - /app/node_modules
@@ -11,3 +17,6 @@ services:
         context: .
         target: "build"
     command: ["npm", "test"]
+    volumes:
+      - ./app:/app
+      - /app/node_modules
