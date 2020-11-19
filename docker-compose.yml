@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+  test:
+    extends: "web"
+    build:
+        context: .
+        target: "build"
+    command: ["npm", "test"]
