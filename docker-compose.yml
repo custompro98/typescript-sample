@@ -16,7 +16,7 @@ services:
     build:
         context: .
         target: "build"
-    command: ["npm", "test"]
+    command: ["npm", "run", "test:interactive"]
     volumes:
       - ./app:/app
       - /app/node_modules
