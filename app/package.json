@@ -4,10 +4,11 @@
   "description": "A repo serving as a typescript template",
   "main": "dist/index.js",
   "scripts": {
+    "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rm -rf dist/",
     "dev": "nodemon src/index.ts",
-    "prebuild": "npm run clean",
+    "lint": "eslint . --ext .ts,.tsx",
     "test": "jest",
     "test:coverage": "jest --collectCoverage",
     "test:interactive": "jest --watchAll"
@@ -16,13 +17,15 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.15",
-    "@typescript-eslint/eslint-plugin": "^4.8.1",
-    "@typescript-eslint/parser": "^4.8.1",
-    "eslint": "^7.13.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.26.0",
     "jest": "^26.6.3",
     "nodemon": "^2.0.6",
+    "prettier": "^2.8.1",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.5"
